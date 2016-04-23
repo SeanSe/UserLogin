@@ -1,6 +1,7 @@
 package com.project.sean.userlogin;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
@@ -84,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
                 // Clear the User session data
                 // and redirect user to LoginActivity
                 session.logoutUser();
+                Toast.makeText(getApplicationContext(), "Logout pressed!",
+                        Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
 
@@ -117,8 +121,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 if(role.equals("Manager")) {
-                    Toast.makeText(getApplicationContext(), "This is Checkout!",
-                            Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, EmpManagementActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "Invalid role, manager access only",
                             Toast.LENGTH_SHORT).show();
@@ -126,5 +130,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+//    @Override
+//    public void onBackPressed() {
+//        // your code.
+//    }
 
 }

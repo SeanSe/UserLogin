@@ -69,6 +69,9 @@ public class LoginActivity extends AppCompatActivity {
                         session.createUserLoginSession("Sean",
                                 "Manager");
 
+                        //Reset the EditText fields
+                        txtPassword.getText().clear();
+
                         // Starting MainActivity
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -77,6 +80,8 @@ public class LoginActivity extends AppCompatActivity {
                         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(i);
 
+                        //Would close the activity, meaning back button would not
+                        //return to it.
                         finish();
 
                     }else if(username.equals("emp") && password.equals("emp")) {
@@ -87,6 +92,9 @@ public class LoginActivity extends AppCompatActivity {
                         session.createUserLoginSession("James",
                                 "Employee");
 
+                        //Reset the EditText fields
+                        txtPassword.getText().clear();
+
                         // Starting MainActivity
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -95,6 +103,8 @@ public class LoginActivity extends AppCompatActivity {
                         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(i);
 
+                        //Would close the activity, meaning back button would not
+                        //return to it.
                         finish();
                     } else{
 
