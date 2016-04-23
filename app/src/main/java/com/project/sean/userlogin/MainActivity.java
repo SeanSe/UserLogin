@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnStockManagement;
     //Button checkout
     Button btnCheckout;
+    //Button employee management
+    Button btnEmpManagement;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         btnStockManagement = (Button) findViewById(R.id.btnStockManagement);
         //Button checkout
         btnCheckout = (Button) findViewById(R.id.btnCheckout);
+        //Button employee management
+        btnEmpManagement = (Button) findViewById(R.id.btnEmpManagement);
 
         Toast.makeText(getApplicationContext(),
                 "User Login Status: " + session.isUserLoggedIn(),
@@ -103,6 +107,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View arg0) {
                 if(role.equals("Manager") || role.equals("Employee") ) {
                     Toast.makeText(getApplicationContext(), "This is Checkout!",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btnEmpManagement.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                if(role.equals("Manager")) {
+                    Toast.makeText(getApplicationContext(), "This is Checkout!",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Invalid role, manager access only",
                             Toast.LENGTH_SHORT).show();
                 }
             }

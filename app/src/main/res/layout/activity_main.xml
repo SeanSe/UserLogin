@@ -39,4 +39,9 @@
         android:layout_height="wrap_content"
         android:text="Checkout"/>
 
+    <Button android:id="@+id/btnEmpManagement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee Management"/>
+
 </LinearLayout>
