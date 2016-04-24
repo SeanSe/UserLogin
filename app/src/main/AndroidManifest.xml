@@ -18,7 +18,8 @@
         <activity android:name=".LoginActivity">
 
         </activity>
-        <activity android:name=".EmpManagementActivity">
+        <activity android:name=".EmpManagementActivity"
+            android:windowSoftInputMode="stateHidden">
 
         </activity>
     </application>
