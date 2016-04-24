@@ -79,6 +79,7 @@ public class EmpManagementActivity extends AppCompatActivity implements View.OnC
         switch(v.getId()) {
             case R.id.button_add_emp: {
                 addEmpInfo();
+                Toast.makeText(this, "Add Details pressed.", Toast.LENGTH_LONG).show();
                 break;
             }
             case R.id.button_get_emp: {
@@ -87,6 +88,7 @@ public class EmpManagementActivity extends AppCompatActivity implements View.OnC
             }
             case R.id.button_update_emp: {
                 updateEmpInfo();
+                Toast.makeText(this, "Update Details pressed.", Toast.LENGTH_LONG).show();
                 break;
             }
             case R.id.button_delete_emp: {
@@ -232,7 +234,7 @@ public class EmpManagementActivity extends AppCompatActivity implements View.OnC
                 empInfo.setContactNo(editContactNumber.getText().toString());
                 empInfo.setPassword(editPassword.getText().toString());
 
-                boolean isUpdated = dbHelper.insertEmpData(empInfo);
+                boolean isUpdated = dbHelper.updateData(empInfo);
 
                 if(isUpdated == true)  {
                     Toast.makeText(this, "Employee No: " + empInfo.getEmpId() + " updated successfully!", Toast.LENGTH_LONG).show();
@@ -270,6 +272,7 @@ public class EmpManagementActivity extends AppCompatActivity implements View.OnC
                 editPassword.setText(result.getString(5));
 
                 Toast.makeText(this, "Employee details displayed.", Toast.LENGTH_LONG).show();
+                result.close();
             } else {
                 Toast.makeText(this, "Employee ID does not exist.", Toast.LENGTH_LONG).show();
             }
