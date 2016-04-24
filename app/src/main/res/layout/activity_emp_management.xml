@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:context=".AddStockFragment"
+        android:orientation="vertical"
+        >
+        <!--android:weightSum="1">-->
+
+        <TextView
+            android:id="@+id/tvEmpID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Employee ID:"
+            android:layout_above="@+id/editEmpId"
+            android:layout_toLeftOf="@+id/editEmpId"
+            android:layout_toStartOf="@+id/editEmpId"
+            android:textColor="@color/Black"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editEmpId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvEmpFName"
+                android:layout_alignRight="@+id/scan_format"
+                android:layout_alignEnd="@+id/scan_format"
+                android:inputType="number"
+                android:ems="10"
+                android:hint="Enter the Employee ID here..."/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvEmpFName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="First Name:"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/Black"/>
+
+        <EditText
+            android:id="@+id/editEmpFName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editEmpId"
+            android:layout_alignLeft="@+id/editEmpId"
+            android:layout_alignStart="@+id/editEmpId"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:hint="Enter the First Name here..."/>
+
+        <TextView
+            android:id="@+id/tvEmpLName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Last Name:"
+            android:layout_below="@+id/editItemName"
+            android:layout_alignRight="@+id/tvEmpFName"
+            android:layout_alignEnd="@+id/tvEmpFName"
+            android:textColor="@color/Black"/>
+
+        <EditText
+            android:id="@+id/editEmpLName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter the Last Name here..."/>
+
+        <TextView
+            android:id="@+id/tvEmpRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Role:"
+            android:textColor="@color/Black"/>
+
+        <EditText
+            android:id="@+id/editEmpRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter the Role here..."/>
+
+        <TextView
+            android:id="@+id/tvEmpContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Contact No:"
+            android:textColor="@color/Black"/>
+
+        <EditText
+            android:id="@+id/editContactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:hint="Enter the Contact Number here..."/>
+
+        <TextView
+            android:id="@+id/tvEmpPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Password:"
+            android:textColor="@color/Black"/>
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the Password here..."/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/button_add_emp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Details" />
+                <Button
+                    android:id="@+id/button_update_emp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Update Details" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/button_get_emp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get Details" />
+                <Button
+                    android:id="@+id/button_delete_emp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Employee" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/button_view_emp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View All Employees" />
+
+    </LinearLayout>
+
+</ScrollView>
