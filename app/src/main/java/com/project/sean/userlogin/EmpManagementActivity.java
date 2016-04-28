@@ -79,7 +79,6 @@ public class EmpManagementActivity extends AppCompatActivity implements View.OnC
         switch(v.getId()) {
             case R.id.button_add_emp: {
                 addEmpInfo();
-                Toast.makeText(this, "Add Details pressed.", Toast.LENGTH_LONG).show();
                 break;
             }
             case R.id.button_get_emp: {
@@ -88,7 +87,6 @@ public class EmpManagementActivity extends AppCompatActivity implements View.OnC
             }
             case R.id.button_update_emp: {
                 updateEmpInfo();
-                Toast.makeText(this, "Update Details pressed.", Toast.LENGTH_LONG).show();
                 break;
             }
             case R.id.button_delete_emp: {
@@ -280,4 +278,5 @@ public class EmpManagementActivity extends AppCompatActivity implements View.OnC
             Toast.makeText(this, "Employee ID required.", Toast.LENGTH_LONG).show();
         }
     }
+
 }

@@ -9,16 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.HashMap;
 
 /**
  *
  * Created by Sean on 22/04/2016.
  */
-
 public class MainActivity extends AppCompatActivity {
-
 
     // User Session Manager Class
     UserSessionManager session;
@@ -52,10 +49,6 @@ public class MainActivity extends AppCompatActivity {
         //Button employee management
         btnEmpManagement = (Button) findViewById(R.id.btnEmpManagement);
 
-        Toast.makeText(getApplicationContext(),
-                "User Login Status: " + session.isUserLoggedIn(),
-                Toast.LENGTH_LONG).show();
-
 
         // Check user login (this is the important point)
         // If User is not logged in , This will redirect user to LoginActivity
@@ -85,8 +78,6 @@ public class MainActivity extends AppCompatActivity {
                 // Clear the User session data
                 // and redirect user to LoginActivity
                 session.logoutUser();
-                Toast.makeText(getApplicationContext(), "Logout pressed!",
-                        Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -136,4 +127,9 @@ public class MainActivity extends AppCompatActivity {
 //        // your code.
 //    }
 
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        Toast.makeText(this, "onResume called!", Toast.LENGTH_LONG).show();
+//    }
 }
